@@ -9,17 +9,18 @@ rows = 6
 cols = 7
 
 def printGameBoard():
-  print("\n     A   B   C   D   E   F   G   ", end="")
+  print("\n     A   B   C   D   E   F   G   ")
   for x in range(rows):
     print("/n   +----+----+----+----+----+----+")
-    print(x, " |", end="")
+    print(x, " |")
     for y in range(cols):
       if(gameBoard[x][y] == "😡"):
-        print("",gameBoard[x][y], ends=" |")
+        print("",gameBoard[x][y])
       elif("", gameBoard[x][y] == "💩"):
-        print("",gameBoard[x][y], ends=" |")
+        print("",gameBoard[x][y],)
       else:
-        print(" ", gameBoard[x][y], end="  |")
+        print(" ", gameBoard[x][y])
   print("\n   +----+----+----+----+----+----+" ) 
 
   printGameBoard()
+
