@@ -10,11 +10,11 @@ while True:
 
     print(f"match {match}!!!\n")
 
-    things = ['rock', 'sciccors','papper']
-    player = input("pick either 'rock', 'papper' or 'sciccors': ")
+    things = ['rock', 'scissors','paper']
+    player = input("pick either 'rock', 'paper' or 'scissors': ")
     while player not in things:
         print ("invalid choice, try again!")
-        player = input("pick either 'rock', 'papper' or 'sciccors': ")
+        player = input("pick either 'rock', 'paper' or 'scissors': ")
     computer = random.choice(things)
     print(f"computer picked {computer}")
     if player == computer:
