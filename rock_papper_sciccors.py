@@ -11,7 +11,7 @@ while True:
     print(f"match {match}!!!\n")
 
     things = ['rock', 'scissors','paper']
-    player = input("pick either 'rock', 'paper' or 'scissors': ")
+    player = input("pick either rock, paper or scissors: ")
     while player not in things:
         print ("invalid choice, try again!")
         player = input("pick either 'rock', 'paper' or 'scissors': ")
