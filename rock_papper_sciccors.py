@@ -3,12 +3,12 @@ import random
 #keeps track of wins
 pl, co = 0, 0 
 
-round = 0
+match = 0
 #stops the game when someone wins
 while True:
-    round += 1
+    match += 1
 
-    print(f"round {round}!!!\n")
+    print(f"match {match}!!!\n")
 
     things = ['rock', 'sciccors','papper']
     player = input("pick either 'rock', 'papper' or 'sciccors': ")
@@ -22,10 +22,10 @@ while True:
     else:
         for i in range(len(things)):
             if computer == things[i] and player == things[i-1]:
-                print(f'player wins round {round}\n')
+                print(f'player wins match {match}\n')
                 pl += 1
             elif player == things[i] and computer == things[i-1]:
-                print(f'computer wins round {round}\n')
+                print(f'computer wins match {match}\n')
                 co += 1
     if pl == 3:
         print(f"player reached 3 first player wins")
