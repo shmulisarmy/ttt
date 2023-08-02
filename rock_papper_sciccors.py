@@ -3,6 +3,7 @@ import random
 #keeps track of wins
 pl, co = 0, 0 
 
+round = 0
 #stops the game when someone wins
 while True:
     round += 1
