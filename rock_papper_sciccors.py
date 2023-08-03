@@ -31,7 +31,8 @@ def get_compuer_choice():
     return computer
 def match_result(player, computer):
     if player == computer:
-        return 'player'
+        print("Draw! Starting match over:")
+        return match_result(get_player_input(), get_compuer_choice())
     else:
         for i in range(len(things)):
             if computer == things[i] and player == things[i-1]:
