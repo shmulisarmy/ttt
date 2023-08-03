@@ -11,21 +11,24 @@ match = 0
 things = ['rock', 'scissors', 'paper']
 #stops the game when someone wins
 
-def get_input():
+def get_player_input():
     player = input("pick either rock, paper or scissors: ")
     while player not in things:
         print ("invalid choice, try again!")
-        player = get_input()
+        player = get_player_input()
     return player
 
 
 def run_match(player):
-    computer = random.choice(things)
-    print(f"computer picked {computer}")
+    computer = get_compuer_choice()
     winner = match_result(player, computer)
     print(f"{winner} wins match {match}")
     scores[winner] += 1
 
+def get_compuer_choice():
+    computer = random.choice(things)
+    print(f"computer picked {computer}")
+    return computer
 def match_result(player, computer):
     if player == computer:
         return 'player'
@@ -41,7 +44,7 @@ while True:
 
     print(f"match {match}!!!\n")
 
-    player = get_input()
+    player = get_player_input()
     run_match(player)
     if scores['player'] == 3:
         print(f"player reached 3 first player wins")
